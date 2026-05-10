@@ -440,27 +440,81 @@
   color: var(--danger);
 }
 
+/* ── Mobile Tab Toggle (hidden on desktop) ───── */
+.mobileTabToggle {
+  display: none;
+}
+
 /* ── Mobile: Editor ─────────────────────────────── */
 @media (max-width: 900px) {
+  .topBar {
+    flex-wrap: wrap;
+    padding: 6px 8px;
+    height: auto;
+  }
+  
+  .topBarRight {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  /* Show the tab toggle */
+  .mobileTabToggle {
+    display: flex;
+    gap: 0;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+
+  .mobileTabBtn {
+    padding: 4px 14px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+
+  .mobileTabBtn.active {
+    background: var(--accent);
+    color: white;
+  }
+
   .mainContent {
     flex-direction: column;
   }
 
-  .editorPane {
+  /* Hide both panes by default on mobile */
+  .editorPane,
+  .previewPane {
+    display: none;
     width: 100%;
     border-right: none;
-    border-bottom: 1px solid var(--border-subtle);
-    max-height: 50vh;
+    max-height: none;
   }
 
-  .previewPane {
-    padding: 16px;
+  /* Show only the active pane — full height */
+  .editorPane.mobileActive {
+    display: block;
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+  }
+
+  .previewPane.mobileActive {
+    display: block;
+    flex: 1;
+    overflow-y: auto;
+    padding: 4px;
   }
 
   .a4Container {
     width: 100%;
     min-height: auto;
-    transform: scale(0.7);
+    transform: scale(0.95);
     transform-origin: top center;
   }
 }
@@ -474,19 +528,22 @@
 
   .topBarLeft {
     order: 1;
-    flex: 1;
+    width: 100%;
+    justify-content: flex-start;
   }
 
   .topBarCenter {
-    order: 3;
+    order: 2;
     width: 100%;
     justify-content: center;
   }
 
   .topBarRight {
-    order: 2;
+    order: 3;
+    width: 100%;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 6px;
   }
 
   .saveIndicator {

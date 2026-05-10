@@ -37,6 +37,7 @@ export default function EditorPage() {
 
   const [mounted, setMounted] = useState(false);
   const [showAddMenu, setShowAddMenu] = useState(false);
+  const [mobileTab, setMobileTab] = useState<'edit' | 'preview'>('edit');
 
   useEffect(() => { setMounted(true); }, []);
 
@@ -178,13 +179,27 @@ html, body { margin: 0; padding: 0; background: white; -webkit-print-color-adjus
           }}>
             Export PDF
           </button>
+          <div className="mobileTabToggle">
+            <button
+              className={`mobileTabBtn ${mobileTab === 'edit' ? 'active' : ''}`}
+              onClick={() => setMobileTab('edit')}
+            >
+              Edit
+            </button>
+            <button
+              className={`mobileTabBtn ${mobileTab === 'preview' ? 'active' : ''}`}
+              onClick={() => setMobileTab('preview')}
+            >
+              Preview
+            </button>
+          </div>
         </div>
       </div>
 
       {/* ── Main Content ────────────────────────── */}
       <div className="mainContent">
         {/* ── Editor Pane ────────────────────────── */}
-        <div className="editorPane">
+        <div className={`editorPane ${mobileTab === 'edit' ? 'mobileActive' : ''}`}>
           <HeaderEditor
             header={resume.header}
             template={template}
@@ -226,7 +241,7 @@ html, body { margin: 0; padding: 0; background: white; -webkit-print-color-adjus
         </div>
 
         {/* ── Preview Pane ───────────────────────── */}
-        <div className="previewPane">
+        <div className={`previewPane ${mobileTab === 'preview' ? 'mobileActive' : ''}`}>
           <div className="a4Container">
             <CVPreview resume={resume} />
           </div>
