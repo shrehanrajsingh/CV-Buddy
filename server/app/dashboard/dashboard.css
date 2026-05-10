@@ -1,0 +1,429 @@
+.dashboard {
+  min-height: 100vh;
+  padding: 0 24px 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── Header ─────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 32px;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+}
+
+.logoText h1 {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.logoText p {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 1px;
+}
+
+.headerActions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* ── Section Titles ─────────────────────────────── */
+.sectionTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 16px;
+}
+
+/* ── Template Selector ──────────────────────────── */
+.templateGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.templateCard {
+  padding: 20px;
+  border-radius: var(--radius-md);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.templateCard:hover {
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-md);
+}
+
+.templateBadge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+
+.badgeIitkgp {
+  background: rgba(34, 197, 94, 0.1);
+  color: #15803d;
+}
+[data-theme="dark"] .badgeIitkgp {
+  color: #4ade80;
+}
+
+.badgeIitb {
+  background: rgba(59, 130, 246, 0.1);
+  color: #1d4ed8;
+}
+[data-theme="dark"] .badgeIitb {
+  color: #60a5fa;
+}
+
+.badgeIitm {
+  background: rgba(168, 85, 247, 0.1);
+  color: #7c3aed;
+}
+[data-theme="dark"] .badgeIitm {
+  color: #c084fc;
+}
+
+.templateCard h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.templateCard p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+.templateMeta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.templateMeta span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ── Resume Grid ────────────────────────────────── */
+.resumeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.resumeCard {
+  border-radius: var(--radius-md);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.resumeCard:hover {
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-md);
+}
+
+.resumePreview {
+  height: 160px;
+  background: var(--preview-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 16px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.miniPreview {
+  width: 100px;
+  height: 140px;
+  background: white;
+  border-radius: 2px;
+  box-shadow: var(--shadow-sm);
+  padding: 8px;
+}
+
+.miniPreviewLine {
+  height: 3px;
+  background: #ddd;
+  border-radius: 1px;
+  margin-bottom: 3px;
+}
+
+.miniPreviewLine:nth-child(1) {
+  width: 55%;
+  background: #555;
+  height: 4px;
+  margin-bottom: 6px;
+}
+
+.miniPreviewLine:nth-child(2) { width: 80%; }
+.miniPreviewLine:nth-child(3) { width: 90%; }
+.miniPreviewLine:nth-child(4) { width: 65%; margin-top: 6px; height: 3px; background: #bbb; }
+.miniPreviewLine:nth-child(5) { width: 85%; }
+.miniPreviewLine:nth-child(6) { width: 75%; }
+
+.resumeInfo {
+  padding: 14px;
+}
+
+.resumeInfo h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.resumeMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.resumeDate {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.resumeActions {
+  display: flex;
+  gap: 2px;
+}
+
+.actionBtn {
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+  font-size: 12px;
+}
+
+.actionBtn:hover {
+  color: var(--text-primary);
+  background: var(--bg-card-hover);
+}
+
+.actionBtn.danger:hover {
+  color: var(--danger);
+  background: rgba(220, 38, 38, 0.06);
+}
+
+/* ── Empty State ────────────────────────────────── */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.emptyIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.emptyState h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.emptyState p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  max-width: 360px;
+  margin-bottom: 20px;
+}
+
+/* ── Modal ──────────────────────────────────────── */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  animation: fadeIn 0.15s ease;
+}
+
+[data-theme="dark"] .modalOverlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  width: 90%;
+  max-width: 440px;
+  box-shadow: var(--shadow-lg);
+  animation: slideUp 0.2s ease;
+}
+
+.modal h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.modal > p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.formGroup {
+  margin-bottom: 16px;
+}
+
+.formGroup label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.formGroup input,
+.formGroup select {
+  width: 100%;
+  padding: 8px 12px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.formGroup select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Responsive ─────────────────────────────────── */
+@media (max-width: 900px) {
+  .templateGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard {
+    padding: 0 16px 32px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .headerActions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .templateGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .resumeGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .templateCard {
+    padding: 16px;
+  }
+
+  .templateMeta {
+    flex-wrap: wrap;
+  }
+
+  .modal {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .resumeActions {
+    flex-wrap: wrap;
+  }
+}

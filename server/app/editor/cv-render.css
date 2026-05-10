@@ -1,0 +1,453 @@
+/* ────────────────────────────────────────────────
+   CV Render — exact replica of original templates
+   ──────────────────────────────────────────────── */
+
+/* ── IITKGP Template ────────────────────────────── */
+.cvRender.tpl-iitkgp {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #000;
+  padding: 10px 6px;
+  line-height: 1.35;
+}
+
+.cvRender.tpl-iitkgp .cvHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cvRender.tpl-iitkgp .cvHeader .cvLogo {
+  width: 90px;
+  height: auto;
+}
+
+.cvRender.tpl-iitkgp .cvHeader .cvHeaderCenter {
+  flex: 1;
+  text-align: center;
+}
+
+.cvRender.tpl-iitkgp .cvHeader .cvHeaderCenter h1 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+}
+
+.cvRender.tpl-iitkgp .cvHeader .cvHeaderCenter h1 .cvName {
+  text-transform: uppercase;
+}
+
+.cvRender.tpl-iitkgp .cvHeader .cvHeaderCenter h2 {
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+  color: #000;
+}
+
+.cvRender.tpl-iitkgp .cvHeader .cvPhoto {
+  width: 90px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Section Heading */
+.cvRender.tpl-iitkgp .cvSectionHeading {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+  border-top: 1px solid #b7bece;
+  border-bottom: 1px solid #b7bece;
+  background-color: #dce1e2;
+  padding: 2px;
+  margin: 0;
+  margin-top: 10px;
+}
+
+/* Table */
+.cvRender.tpl-iitkgp .cvTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cvRender.tpl-iitkgp .cvTable th {
+  font-weight: bold;
+  color: #000;
+  text-align: left;
+  padding: 0 10px 0 0;
+}
+
+.cvRender.tpl-iitkgp .cvTable td {
+  padding: 0 10px 0 0;
+  font-size: 16px;
+}
+
+/* Lists */
+.cvRender.tpl-iitkgp .cvList {
+  list-style-type: circle;
+  list-style-position: outside;
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+
+.cvRender.tpl-iitkgp .cvList li {
+  margin-left: 8px;
+  padding-left: 5px;
+  font-size: 16px;
+}
+
+.cvRender.tpl-iitkgp .cvList li::marker {
+  content: "\25cb";
+  color: #000;
+  font-size: 16px;
+}
+
+/* Entry heading (projects, POR) — no bullet */
+.cvRender.tpl-iitkgp .cvList li.cvEntryHeading {
+  list-style: none;
+  margin-left: -12px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.cvRender.tpl-iitkgp .cvList li.cvEntryHeading::marker {
+  content: "";
+}
+
+.cvRender.tpl-iitkgp .cvTimeline {
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+.cvRender.tpl-iitkgp .cvSupervisor {
+  font-weight: normal;
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.cvRender.tpl-iitkgp .cvOrganization {
+  font-weight: normal;
+}
+
+.cvRender.tpl-iitkgp .cvPorTimeline {
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+/* Skills */
+.cvRender.tpl-iitkgp .cvSkillCategory {
+  font-weight: bold;
+}
+
+/* Coursework table */
+.cvRender.tpl-iitkgp .cvCourseworkTable {
+  width: 100%;
+}
+
+.cvRender.tpl-iitkgp .cvCourseworkTable td {
+  padding: 0 10px 0 0;
+  font-size: 16px;
+}
+
+.cvRender.tpl-iitkgp .cvCourseworkTable td::before {
+  content: "\25cb";
+  color: #000;
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+/* Links */
+.cvRender.tpl-iitkgp a {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* ── IITB Template ──────────────────────────────── */
+.cvRender.tpl-iitb {
+  font-family: 'EB Garamond', serif;
+  font-size: 14px;
+  color: #000;
+  padding: 15mm;
+  line-height: 1.35;
+}
+
+.cvRender.tpl-iitb .cvHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.cvRender.tpl-iitb .cvHeader .cvLogo {
+  width: 72px;
+  height: auto;
+}
+
+.cvRender.tpl-iitb .cvHeader .cvHeaderCenter {
+  flex: 1;
+  text-align: center;
+}
+
+.cvRender.tpl-iitb .cvHeader .cvHeaderCenter h1 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin: 2px 0;
+}
+
+.cvRender.tpl-iitb .cvHeader .cvHeaderCenter h2 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 2px 0;
+  color: #000;
+}
+
+.cvRender.tpl-iitb .cvHeaderRight h2 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 2px 0;
+  text-align: right;
+}
+
+.cvRender.tpl-iitb .cvSectionHeading {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #292929;
+  border-top: 2px solid #707070;
+  border-bottom: 2px solid #707070;
+  padding: 2px;
+  margin: 0;
+  margin-top: 8px;
+}
+
+.cvRender.tpl-iitb .cvTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cvRender.tpl-iitb .cvTable th {
+  font-weight: bold;
+  text-align: left;
+  padding: 0 8px 0 0;
+}
+
+.cvRender.tpl-iitb .cvTable td {
+  padding: 0 8px 0 0;
+  font-size: 14px;
+}
+
+.cvRender.tpl-iitb .cvList {
+  list-style-type: circle;
+  list-style-position: outside;
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+
+.cvRender.tpl-iitb .cvList li {
+  margin-left: 8px;
+  padding-left: 5px;
+  font-size: 14px;
+}
+
+.cvRender.tpl-iitb .cvList li::marker {
+  content: "\25cb";
+  color: #000;
+  font-size: 14px;
+}
+
+.cvRender.tpl-iitb .cvList li.cvEntryHeading {
+  list-style: none;
+  margin-left: -12px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.cvRender.tpl-iitb .cvList li.cvEntryHeading::marker {
+  content: "";
+}
+
+.cvRender.tpl-iitb .cvTimeline {
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+.cvRender.tpl-iitb .cvSupervisor {
+  font-weight: normal;
+  font-style: italic;
+}
+
+.cvRender.tpl-iitb .cvOrganization {
+  font-weight: normal;
+}
+
+.cvRender.tpl-iitb .cvSkillCategory {
+  font-weight: bold;
+}
+
+.cvRender.tpl-iitb .cvCourseworkTable {
+  width: 100%;
+}
+
+.cvRender.tpl-iitb .cvCourseworkTable td {
+  padding: 0 8px 0 0;
+  font-size: 14px;
+}
+
+.cvRender.tpl-iitb .cvCourseworkTable td::before {
+  content: "\25cb";
+  color: #000;
+  margin-right: 5px;
+}
+
+.cvRender.tpl-iitb a {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* ── IITM Template ──────────────────────────────── */
+.cvRender.tpl-iitm {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 14px;
+  color: #000;
+  padding: 20mm;
+  line-height: 1.4;
+}
+
+.cvRender.tpl-iitm .cvHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cvRender.tpl-iitm .cvHeader .cvHeaderLeft {
+  flex: 1;
+}
+
+.cvRender.tpl-iitm .cvHeader .cvHeaderLeft h1 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #0d8fcd;
+  margin: 0;
+}
+
+.cvRender.tpl-iitm .cvHeader .cvHeaderLeft h1 span.cvRoll {
+  font-weight: 100;
+  color: #b7bece;
+}
+
+.cvRender.tpl-iitm .cvHeader .cvHeaderLeft h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  color: #000;
+}
+
+.cvRender.tpl-iitm .cvHeader .cvLogo {
+  width: 120px;
+  height: auto;
+}
+
+.cvRender.tpl-iitm .cvSectionHeading {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  color: #0d8fcd;
+  border-bottom: 1px solid #0d8fcd;
+  padding: 2px 0;
+  margin: 0;
+  margin-top: 16px;
+}
+
+.cvRender.tpl-iitm .cvTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cvRender.tpl-iitm .cvTable th {
+  font-weight: bold;
+  text-align: left;
+  padding: 0 8px 0 0;
+}
+
+.cvRender.tpl-iitm .cvTable td {
+  padding: 0 8px 0 0;
+  font-size: 14px;
+}
+
+.cvRender.tpl-iitm .cvList {
+  list-style-type: circle;
+  list-style-position: outside;
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+
+.cvRender.tpl-iitm .cvList li {
+  margin-left: 8px;
+  padding-left: 5px;
+  font-size: 14px;
+}
+
+.cvRender.tpl-iitm .cvList li::marker {
+  content: "\25cb";
+  color: #0d8fcd;
+  font-size: 14px;
+}
+
+.cvRender.tpl-iitm .cvList li.cvEntryHeading {
+  list-style: none;
+  margin-left: -12px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.cvRender.tpl-iitm .cvList li.cvEntryHeading::marker {
+  content: "";
+}
+
+.cvRender.tpl-iitm .cvTimeline {
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+.cvRender.tpl-iitm .cvSupervisor {
+  font-weight: normal;
+  font-style: italic;
+}
+
+.cvRender.tpl-iitm .cvOrganization {
+  font-weight: normal;
+}
+
+.cvRender.tpl-iitm .cvSkillCategory {
+  font-weight: bold;
+}
+
+.cvRender.tpl-iitm .cvCourseworkTable {
+  width: 100%;
+}
+
+.cvRender.tpl-iitm .cvCourseworkTable td {
+  padding: 0 8px 0 0;
+  font-size: 14px;
+}
+
+.cvRender.tpl-iitm .cvCourseworkTable td::before {
+  content: "\25cb";
+  color: #0d8fcd;
+  margin-right: 5px;
+}
+
+.cvRender.tpl-iitm a {
+  color: #0d8fcd;
+  text-decoration: underline;
+}
