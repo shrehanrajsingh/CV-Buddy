@@ -75,7 +75,7 @@ export default function DashboardPage() {
           <div className="logoIcon">C</div>
           <div className="logoText">
             <h1>CV Studio</h1>
-            <p>Build professional IIT resumes</p>
+            <p>Built by <a href="https://shrehanrajsingh.dev" style={{ color: '#000', textDecoration: 'underline' }}>shrehanrajsingh</a></p>
           </div>
         </div>
         <div className="headerActions">
@@ -217,6 +217,16 @@ export default function DashboardPage() {
           </div>
         </div>
       )}
+      {/* Footer */}
+      <footer style={{
+        marginTop: 'auto',
+        padding: '32px 0 16px',
+        textAlign: 'center',
+        fontSize: '13px',
+        color: 'var(--text-muted)'
+      }}>
+        Made with &lt;3 by <a href="https://github.com/shrehanrajsingh" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)', textDecoration: 'underline' }}>shrehanrajsingh</a>
+      </footer>
     </div>
   );
 }

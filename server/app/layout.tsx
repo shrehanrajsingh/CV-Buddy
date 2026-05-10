@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "CV Studio — Build Professional IIT Resumes",
+  title: "CV Studio by shrehanrajsingh",
   description: "A modern, interactive CV builder for IIT students. Create pixel-perfect resumes with live preview, drag-and-drop sections, and instant PDF export.",
 };
 
